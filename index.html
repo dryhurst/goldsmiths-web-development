@@ -42,6 +42,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <style>
       .overlay {
@@ -84,7 +88,7 @@
       .footer {
         background-color: rgb(248, 248, 248);
       }
-      /* In case you want to disable the video */
+      /* This needs to be fixed */
       @media screen and (max-width: 400px) {
         html {
           background: url("./assets/images/video-poster.jpg");
@@ -186,8 +190,12 @@
       <!-- video text overlay -->
       <div class="overlay">
         <div>
-          <h1>Welcome to Goldsmiths Land</h1>
-          <h4>The most amazing rides in the world!</h4>
+          <h1 class="animate__animated animate__heartBeat">
+            Welcome to Goldsmiths Land
+          </h1>
+          <h4 class="animate__animated animate__bounce animate__delay-2s">
+            The most amazing rides in the world!
+          </h4>
           <div class="header-button">
             <button class="waves-effect waves-light btn-large">
               Tour the park
