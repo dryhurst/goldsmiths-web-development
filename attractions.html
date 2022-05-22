@@ -1,114 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
   <head>
     <meta charset="utf-8" />
+    <!-- ______     ______     __         _____     ______     __    __     __     ______   __  __     ______    
+        /\  ___\   /\  __ \   /\ \       /\  __-.  /\  ___\   /\ "-./  \   /\ \   /\__  _\ /\ \_\ \   /\  ___\   
+        \ \ \__ \  \ \ \/\ \  \ \ \____  \ \ \/\ \ \ \___  \  \ \ \-./\ \  \ \ \  \/_/\ \/ \ \  __ \  \ \___  \  
+         \ \_____\  \ \_____\  \ \_____\  \ \____-  \/\_____\  \ \_\ \ \_\  \ \_\    \ \_\  \ \_\ \_\  \/\_____\ 
+          \/_____/   \/_____/   \/_____/   \/____/   \/_____/   \/_/  \/_/   \/_/     \/_/   \/_/\/_/   \/_____/ 
+                                                                                                                
+         __         ______     __   __     _____                                                                 
+        /\ \       /\  __ \   /\ "-.\ \   /\  __-.                                                               
+        \ \ \____  \ \  __ \  \ \ \-.  \  \ \ \/\ \                                                              
+         \ \_____\  \ \_\ \_\  \ \_\\"\_\  \ \____-                                                              
+          \/_____/   \/_/\/_/   \/_/ \/_/   \/____/ 
+        
+        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, & Jonathan Dryhurst Roberts 
+          2022
+        -->
+
     <!-- title shows up in the browser tab -->
     <title>Goldsmiths Land | The most amazing rides in the world!</title>
+    <script
+      src="https://kit.fontawesome.com/f37eff7305.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
     <!-- start header -->
     <header>
-      <span>&#9786;</span>
-      <h3><a href="index.html">Goldsmith Land</a></h3>
       <!-- navigation element as unorded list allows us to style it nicely -->
-      <nav>
-        <ul>
-          <li><a href="tickets.html">Tickets</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#">Dining</a></li>
-          <li><a href="#">Hours</a></li>
-        </ul>
-      </nav>
+      <nav class="navbar is-fixed-top" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img
+              alt="Goldsmiths Land Logo"
+              src="./assets/images/logo_goldsmiths_black.png"
+              width="112"
+              height="28"
+            />
+          </a>
 
-      <hr />
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar-hamburger-kingdom" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="./index.html"
+              ><span class="icon"><i class="fas fa-home"></i></span>&nbsp;Home
+            </a>
+
+            <a class="navbar-item" href="./tickets.html"
+              ><i class="fa-solid fa-ticket"></i>&nbsp;Tickets
+            </a>
+            <a class="navbar-item" href="./attractions.html"
+              ><i class="fa-solid fa-sleigh"></i>&nbsp;Attractions
+            </a>
+            <a class="navbar-item">
+              <i class="fa-solid fa-hotel"></i>&nbsp;Hotel
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-burger"></i>&nbsp;Dining
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-clock"></i>&nbsp;Hours
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Park Membership</strong>
+                </a>
+                <a class="button is-light"> Log in </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- start main -->
-    <main>
-      <h1>Attractions at Goldsmith Land</h1>
-      <div>
-        <img src="./images/midterm-rollercoaster.jpg" alt="Placeholder image." height="200" width="300" />
-        <h2>Midterm Rollercoaster</h2>
-        <table>
-          <tr>
-            <th>Thrill level :</th>
-            <td>Freaking Awesome</td>
-          </tr>
-          <tr>
-            <th>Attraction Type :</th>
-            <td>Thrill</td>
-          </tr>
-          <tr>
-            <th>Minimum height :</th>
-            <td>4' 6"</td>
-          </tr>
-        </table>
+    <!-- begin content -->
+    <div class="content is-large">
+      <figure class="image is-16by9">
+        <iframe
+          class="has-ratio"
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/VnvnS5dlKZA"
+          allowfullscreen
+        ></iframe>
+      </figure>
+      <div class="box">
+        Goldsmiths Land has the worlds most famous attractions. Admittedly some
+        of them are famous for not so good reasons (such as the demon, we still
+        haven't found little Billy.) We are known the world over for a good
+        time. We provide more laughs, more giggles, more vomit inducing
+        attractions then all other theme parks combined
       </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification">
+                <h4 class="title">Final Castle of Terror</h4>
+                <p class="subtitle">Bring extra pants!</p>
+                <figure class="image is-4by3">
+                  <img
+                    alt="Castle Roller Coaster is Freaking Awesome"
+                    src="./assets/images/castle-rollercoaster.jpg"
+                  />
+                </figure>
+                <table>
+                  <tr>
+                    <th>Thrill level:</th>
+                    <td>Freaking Awesome</td>
+                  </tr>
+                  <tr>
+                    <th>Attraction Type:</th>
+                    <td>Thrill</td>
+                  </tr>
+                  <tr>
+                    <th>Minimum height:</th>
+                    <td>4' 6"</td>
+                  </tr>
+                </table>
+              </article>
+              <article class="tile is-child notification is-info">
+                <h4 class="title">Vacations Ferries Wheel</h4>
+                <p class="subtitle">Round and Round We Go!</p>
+                <figure class="image is-4by3">
+                  <img
+                    alt="Vacations Ferris Wheel"
+                    src="./assets/images/vacations-ferris.jpg"
+                  />
+                </figure>
+                <table>
+                  <tr>
+                    <th>Thrill level:</th>
+                    <td>Cool</td>
+                  </tr>
+                  <tr>
+                    <th>Attraction Type:</th>
+                    <td>Thrill</td>
+                  </tr>
+                  <tr>
+                    <th>Minimum height:</th>
+                    <td>4' 6"</td>
+                  </tr>
+                </table>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info">
+                <h4 class="title">Midterm Rollercoaster</h4>
+                <p class="subtitle">Talk about ups and downs!</p>
+                <figure class="image is-4by3">
+                  <img
+                    alt="Midterm Roller Coaster"
+                    src="./assets/images/midterm-rollercoaster.jpg"
+                  />
+                </figure>
+                <table>
+                  <tr>
+                    <th>Thrill level:</th>
+                    <td>Freaking Awesome</td>
+                  </tr>
+                  <tr>
+                    <th>Attraction Type:</th>
+                    <td>Thrill</td>
+                  </tr>
+                  <tr>
+                    <th>Minimum height:</th>
+                    <td>4' 6"</td>
+                  </tr>
+                </table>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+              <h4 class="title">Registering Modules Supershot</h4>
+              <p class="subtitle">Talk about ups and downs!</p>
+              <figure class="image is-4by3">
+                <img alt="Super Shot" src="./assets/images/super-shot.jpg" />
+              </figure>
+              <table>
+                <tr>
+                  <th>Thrill level:</th>
+                  <td>Boredom</td>
+                </tr>
+                <tr>
+                  <th>Attraction Type:</th>
+                  <td>Thrill</td>
+                </tr>
+                <tr>
+                  <th>Minimum height:</th>
+                  <td>4' 6"</td>
+                </tr>
+              </table>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div>
-        <img src="./images/castle-rollercoaster.jpg" alt="Placeholder image." height="200" width="300"  />
-        <h2>Final Castle of Terror</h2>
-        <table>
-          <tr>
-            <th>Thrill level :</th>
-            <td>Freaking Awesome</td>
-          </tr>
-          <tr>
-            <th>Attraction Type :</th>
-            <td>Thrill</td>
-          </tr>
-          <tr>
-            <th>Minimum height :</th>
-            <td>4' 6"</td>
-          </tr>
-        </table>
-      </div>
-
-      <div>
-        <img src="./images/super-shot.jpg" alt="Placeholder image." height="200" width="300"  />
-        <h2>Registering Modules Supershot</h2>
-        <table>
-          <th>
-            <t>Thrill level :</t>
-            <td>Freaking Awesome</td>
-          </th>
-          <tr>
-            <th>Attraction Type :</th>
-            <td>Boredom</td>
-          </tr>
-          <tr>
-            <th>Minimum height :</th>
-            <td>4' 6"</td>
-          </tr>
-        </table>
-      </div>
-
-      <div>
-        <img src="./images/vacations-ferris.jpg" alt="Placeholder image." height="200" width="300"  />
-        <h2>Vacations Ferries Wheel</h2>
-        <table>
-          <tr>
-            <th>Thrill level :</th>
-            <td>cool</td>
-          </tr>
-          <tr>
-            <th>Attraction Type :</th>
-            <td>Boredom</td>
-          </tr>
-          <tr>
-            <th>Minimum height :</th>
-            <td>4' 6"</td>
-          </tr>
-        </table>
-      </div>
-    </main>
-    <hr />
     <!-- start footer -->
-    <footer>
-      <h1>Goldsmith Land</h1>
-      <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
-      &copy; Goldsmith Land Inc.
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Goldsmiths Land</strong> by
+          <a href="./index.html">Team web-develop-t4g1-t3j</a>. The source code
+          is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+          website content is licensed
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY NC SA 4.0</a
+          >.
+        </p>
+        <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
+      </div>
     </footer>
+    <!-- end footer -->
   </body>
 </html>

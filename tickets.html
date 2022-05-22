@@ -1,137 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
   <head>
     <meta charset="utf-8" />
+    <!-- ______     ______     __         _____     ______     __    __     __     ______   __  __     ______    
+        /\  ___\   /\  __ \   /\ \       /\  __-.  /\  ___\   /\ "-./  \   /\ \   /\__  _\ /\ \_\ \   /\  ___\   
+        \ \ \__ \  \ \ \/\ \  \ \ \____  \ \ \/\ \ \ \___  \  \ \ \-./\ \  \ \ \  \/_/\ \/ \ \  __ \  \ \___  \  
+         \ \_____\  \ \_____\  \ \_____\  \ \____-  \/\_____\  \ \_\ \ \_\  \ \_\    \ \_\  \ \_\ \_\  \/\_____\ 
+          \/_____/   \/_____/   \/_____/   \/____/   \/_____/   \/_/  \/_/   \/_/     \/_/   \/_/\/_/   \/_____/ 
+                                                                                                                
+         __         ______     __   __     _____                                                                 
+        /\ \       /\  __ \   /\ "-.\ \   /\  __-.                                                               
+        \ \ \____  \ \  __ \  \ \ \-.  \  \ \ \/\ \                                                              
+         \ \_____\  \ \_\ \_\  \ \_\\"\_\  \ \____-                                                              
+          \/_____/   \/_/\/_/   \/_/ \/_/   \/____/ 
+        
+        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, & Jonathan Dryhurst Roberts 
+          2022
+        -->
+
     <!-- title shows up in the browser tab -->
     <title>Goldsmiths Land | The most amazing rides in the world!</title>
+    <script
+      src="https://kit.fontawesome.com/f37eff7305.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <style>
+      .hero.has-background {
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-background {
+        position: absolute;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+      }
+      .hero-background.is-transparent {
+        opacity: 0.7;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
+    <!-- start header -->
     <header>
-      <span>&#9786;</span>
-      <h3><a href="index.html">Goldsmith Land</a></h3>
       <!-- navigation element as unorded list allows us to style it nicely -->
-      <nav>
-        <ul>
-          <li><a href="tickets.html">Tickets</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#">Dining</a></li>
-          <li><a href="#">Hours</a></li>
-        </ul>
+      <nav class="navbar is-fixed-top" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img
+              alt="Goldsmiths Land Logo"
+              src="./assets/images/logo_goldsmiths_black.png"
+              width="112"
+              height="28"
+            />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar-hamburger-kingdom" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="./index.html"
+              ><span class="icon"><i class="fas fa-home"></i></span>&nbsp;Home
+            </a>
+
+            <a class="navbar-item" href="./tickets.html"
+              ><i class="fa-solid fa-ticket"></i>&nbsp;Tickets
+            </a>
+            <a class="navbar-item" href="./attractions.html"
+              ><i class="fa-solid fa-sleigh"></i>&nbsp;Attractions
+            </a>
+            <a class="navbar-item">
+              <i class="fa-solid fa-hotel"></i>&nbsp;Hotel
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-burger"></i>&nbsp;Dining
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-clock"></i>&nbsp;Hours
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Park Membership</strong>
+                </a>
+                <a class="button is-light"> Log in </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-      <hr />
     </header>
 
-    <main>
-      <h2>Tickets for Goldsmith Land</h2>
+    <!-- begin content -->
 
-      <h3>Hotel + Tickets</h3>
-      <img src="images/ticket-and-hotel.jpg" alt="Single day ticket." />
+    <div class="content is-large">
+      <section class="hero is-danger is-fullheight has-background">
+        <img
+          class="hero-background is-transparent"
+          src="./assets/images/tickets-hero.jpg"
+          alt="Ticket Hero"
+        />
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Tickets</h1>
+            <h3 class="subtitle">You totally want to buy them</h3>
+          </div>
+        </div>
+      </section>
 
-      <table cellpadding="10" cellspacing="10">
-        <tr>
-          <td>
-            <h3>Save with combo packs</h3>
-            <p>Save up to 25% by purchasing your ticket and hotel together</p>
-          </td>
-          <td>
-            <h3>One ticket to rule them all</h3>
-            <p>
+      <section class="section">
+        <h1 class="title">Tickets for Goldsmiths Land</h1>
+        <h2 class="subtitle">
+          There are three ticket type options. Choose the package you that best
+          suits you, your family, and your friends. There are absolutely no
+          refunds, so don't even think about purchasing tickets and then calling
+          the manager to complain that you can&apos;t get a refund. Please see
+          the rules about Karens.
+        </h2>
+      </section>
+
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Tickets Sold</p>
+            <p class="title">95,235,678,567</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Satisfied Customers</p>
+            <p class="title">3</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Flip Flops Found In Pool Filter</p>
+            <p class="title">1,978,333</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Hotel Towels Stolen</p>
+            <p class="title">936,8723,337</p>
+          </div>
+        </div>
+      </nav>
+
+      <hr />
+
+      <!-- Hotel + Park Pass< -->
+      <section class="section">
+        <h1 class="title is-info">Hotel + Park Pass</h1>
+        <div class="columns">
+          <div class="column"><h5>Save with combo packs</h5></div>
+          <div class="column"><h5>One ticket to rule them all</h5></div>
+          <div class="column"><h5>Free breakfast</h5></div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <h5>Save up to 25% by purchasing your ticket and hotel together</h5>
+          </div>
+          <div class="column">
+            <h5>
               Use the single ticket to gain entry to all rides, restaurants, and
               your hotel.
-            </p>
-          </td>
-          <td>
-            <h3>Free breakfast</h3>
-            <p>
+            </h5>
+          </div>
+          <div class="column">
+            <h5>
               All you can eat brunch buffet to nourish your inner rollercoaster
               enthusiast
-            </p>
-          </td>
-        </tr>
-      </table>
+            </h5>
+          </div>
+        </div>
+      </section>
 
       <!-- buy button -->
-      <button>Buy your tickets</button>
+      <div class="block" style="display: flex; justify-content: center">
+        <button class="button is-primary is-large">
+          <span class="icon is-small" style="margin-right: 20px">
+            <i class="fa-solid fa-sack-dollar"></i> </span
+          >Order Hotel + Park Pass
+        </button>
+      </div>
 
-      <h3>Single Day Tickets</h3>
-      <img
-        src="images/single-day-ticket.jpg"
-        alt="Single day ticket."
-        height="200"
-        width="300"
-      />
-      <table cellpadding="10" cellspacing="10">
-        <tr>
-          <td>
-            <h3>Just ride today</h3>
-            <p>
-              Just buy the single day ticket and experience everything in one
+      <hr />
+
+      <!-- Single Day -->
+      <section class="section">
+        <h1 class="title is-info">Single Day Park Pass</h1>
+        <div class="columns">
+          <div class="column"><h5>Just ride today</h5></div>
+          <div class="column"><h5>So no to sadness</h5></div>
+          <div class="column"><h5>Jump to the front of queues</h5></div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <h5>
+              Just buy the single day oark pass and experience everything in one
               day.
-            </p>
-          </td>
-          <td>
-            <h3>
+            </h5>
+          </div>
+          <div class="column">
+            <h5>
               No overwhelming sadness when you can't come for the rest of the
               season
-            </h3>
-            <p>
-              Many season ticket holders can't come all the time and they are
-              remorseful the bothered to buy the season pass.
-            </p>
-          </td>
-          <td>
-            <h3>Jump to the front of queues</h3>
-            <p>
+            </h5>
+          </div>
+          <div class="column">
+            <h5>
               Single day ticket holders are considered VIPs since they will only
               come once or twice in their life and we want them to have the best
               experience and help them live their best life.
-            </p>
-          </td>
-        </tr>
-      </table>
+            </h5>
+          </div>
+        </div>
+      </section>
 
       <!-- buy button -->
-      <button>Buy your tickets</button>
+      <div class="block" style="display: flex; justify-content: center">
+        <button class="button is-primary is-large">
+          <span class="icon is-small" style="margin-right: 20px">
+            <i class="fa-solid fa-sack-dollar"></i> </span
+          >Order Single Day Park Pass
+        </button>
+      </div>
 
-      <h3>Season Tickets</h3>
-      <img src="images/season-pass.jpg" alt="Single day ticket." />
+      <hr />
 
-      <table cellpadding="10" cellspacing="10">
-        <tr>
-          <td>
-            <h3>Come all the time</h3>
-            <p>
+      <!-- Season Park Pass -->
+      <section class="section">
+        <h1 class="title is-info">Season Park Pass</h1>
+        <div class="columns">
+          <div class="column"><h5>Come all the time</h5></div>
+          <div class="column"><h5>Get a free tshirt</h5></div>
+          <div class="column"><h5>Your friends will be jealous</h5></div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <h5>
               With a season pass you can just come whenever you want. It's
               AWESOME!
-            </p>
-          </td>
-          <td>
-            <h3>Get a free tshirt</h3>
-            <p>
-              Everyone wants a Goldsmith Land tshirt, but only season ticket
+            </h5>
+          </div>
+          <div class="column">
+            <h5>
+              Everyone wants a Goldsmiths Land tshirt, but only season ticket
               holders can have one.
-            </p>
-          </td>
-          <td>
-            <h3>Your friends will be jealous</h3>
-            <p>
+            </h5>
+          </div>
+          <div class="column">
+            <h5>
               Gain notarity among your friends and family. You'll be invited to
-              all the cool parties. People will wish they were you!
-            </p>
-          </td>
-        </tr>
-      </table>
+              all the cool parties. People will wish they were you! Buy your
+              tickets
+            </h5>
+          </div>
+        </div>
+      </section>
 
       <!-- buy button -->
-      <button>Buy your tickets</button>
-    </main>
-    <hr />
-    <!-- start footer -->
-    <footer>
-      <h1>Goldsmith Land</h1>
-      <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
-      &copy; Goldsmith Land Inc.
-    </footer>
+      <div class="block" style="display: flex; justify-content: center">
+        <button class="button is-primary is-large">
+          <span class="icon is-small" style="margin-right: 20px">
+            <i class="fa-solid fa-sack-dollar"></i> </span
+          >Order Season Park Pass
+        </button>
+      </div>
+
+      <hr />
+
+      <!-- start footer -->
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Goldsmiths Land</strong> by
+            <a href="./index.html">Team web-develop-t4g1-t3j</a>. The source
+            code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            The website content is licensed
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY NC SA 4.0</a
+            >.
+          </p>
+          <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
   </body>
 </html>

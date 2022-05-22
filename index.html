@@ -14,110 +14,442 @@
          \ \_____\  \ \_\ \_\  \ \_\\"\_\  \ \____-                                                              
           \/_____/   \/_/\/_/   \/_/ \/_/   \/____/ 
         
-        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, and Jonathan Dryhurst Roberts 
+        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, & Jonathan Dryhurst Roberts 
           2022
         -->
 
     <!-- title shows up in the browser tab -->
     <title>Goldsmiths Land | The most amazing rides in the world!</title>
+    <script
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/f37eff7305.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <style>
+      .overlay {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .overlay h1 {
+        background: rgb(255, 255, 255) none repeat scroll 0 0;
+        color: #000;
+        font-weight: 800;
+        margin: 3rem 0 0;
+        mix-blend-mode: luminosity;
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 4rem;
+      }
+      .overlay h4 {
+        background: rgb(255, 255, 255) none repeat scroll 0 0;
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        margin: 3rem 0 0;
+        mix-blend-mode: luminosity;
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 2rem;
+      }
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+      }
+      .footer {
+        background-color: rgb(248, 248, 248);
+      }
+      /* In case you want to disable the video */
+      @media screen and (max-width: 400px) {
+        html {
+          background: url("./assets/images/video-poster.jpg");
+          background-size: cover;
+        }
+        .video-container {
+          display: none;
+        }
+      }
+      .nav-wrapper {
+        background-color: transparent;
+      }
+      .header-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <span>&#9786;</span>
-      <h3><a href="index.html">Goldsmith Land</a></h3>
       <!-- navigation element as unorded list allows us to style it nicely -->
-      <nav>
-        <ul>
-          <li><a href="tickets.html">Tickets</a></li>
-          <li><a href="attractions.html">Attractions</a></li>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#">Dining</a></li>
-          <li><a href="#">Hours</a></li>
-        </ul>
+      <nav class="navbar is-fixed-top" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img
+              alt="Goldsmiths Land Logo"
+              src="./assets/images/logo_goldsmiths_black.png"
+              width="112"
+              height="28"
+            />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="./index.html"
+              ><span class="icon"><i class="fas fa-home"></i></span>&nbsp;Home
+            </a>
+
+            <a class="navbar-item" href="./tickets.html"
+              ><i class="fa-solid fa-ticket"></i>&nbsp;Tickets
+            </a>
+            <a class="navbar-item" href="./attractions.html"
+              ><i class="fa-solid fa-sleigh"></i>&nbsp;Attractions
+            </a>
+            <a class="navbar-item">
+              <i class="fa-solid fa-hotel"></i>&nbsp;Hotel
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-burger"></i>&nbsp;Dining
+            </a>
+            <a class="navbar-item"
+              ><i class="fa-solid fa-clock"></i>&nbsp;Hours
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Park Membership</strong>
+                </a>
+                <a class="button is-light"> Log in </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-      <hr />
-      <div>
-        <img
-          src="http://cdn.cnn.com/cnnnext/dam/assets/190705153928-millennium-force-rollercoaster-004.jpg"
-          height="500"
-          width="800"
-          alt="Image of people hanging on for dear life while riding a super sick rollercoaster!"
-        />
-        <h2>The most amazing rides in the world</h2>
-        <p>
-          Here at Goldsmith Land we don't mess around. Our rides are guaranteed
-          to leave you wondering "if this was such a good idea." We truly have
-          the biggest, fastest, and scariest rides in the world. If your face
-          hasn't melted off by pure adrenaline by the end of the day you'll get
-          your money back!
-        </p>
-        <a href="#">Tour the park</a>
-      </div>
-
-      <p><a href="#">Hotels+Tickets</a></p>
-
-      <a href="tickets.html">Tickets</a>
-
-      <table>
-        <tr>
-          <th>Pick Your Dates</th>
-          <th>Hotels & Resorts</th>
-          <th>Rooms & Guests</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" placeholder="Arrival Date" />
-            <input type="text" placeholder="Depature Date" />
-          </td>
-          <td>
-            <select name="All Hotels">
-              <option>All Hotels</option>
-            </select>
-          </td>
-          <td>
-            <input type="number" placeholder="rooms" />rooms
-            <input type="number" placeholder="guests" />guests
-          </td>
-          <td><button>Find prices</button></td>
-        </tr>
-      </table>
     </header>
 
-    <main>
-      <h2>Goldsmith land 30th Anniversary</h2>
-      <img
-        src="./images/30-years.jpg"
-        height="300"
-        width="450"
-        alt="Placeholder image."
-      />
-      <p>
-        We can't believe it's been 30 years! We could not have made it this far
-        without the support of all you rollercoaster fanatics! This year to
-        celebrate 30 years we are giving away 1 FREE rollercoaster. That's
-        right! One lucky winner will receive a fully operational rollercoaster
-        installed in their garden.
-      </p>
-      <h2>Goldsmith Land Premier Access</h2>
-      <img
-        src="./images/premium-access.jpg"
-        height="200"
-        width="300"
-        alt="Placeholder image."
-      />
-      <p>
-        Premier access is for those thrill seakers who really want to live life
-        on the edge. Get your premier pass today to experience the park like
-        never before!
-      </p>
-    </main>
-    <hr />
-    <!-- start footer -->
-    <footer>
-      <h1>Goldsmith Land</h1>
-      <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
-      &copy; Goldsmith Land Inc.
-    </footer>
+    <!-- begin content -->
+    <div class="content is-large">
+      <!-- full screen video media container -->
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        poster="./assets/images/video-poster.jpg"
+      >
+        <source type="video/mp4" src="./assets/video/pov-rollercoaster.mp4" />
+        <source src="./assets/video/pov-rollercoaster.mp4" type="video/webm" />
+      </video>
+
+      <!-- video text overlay -->
+      <div class="overlay">
+        <div>
+          <h1>Welcome to Goldsmiths Land</h1>
+          <h4>The most amazing rides in the world!</h4>
+          <div class="header-button">
+            <button class="waves-effect waves-light btn-large">
+              Tour the park
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end full screen video media container -->
+
+      <div class="notification is-primary">
+        Here at Goldsmiths Land we don't mess around. Our rides are guaranteed
+        to leave you wondering "if this was such a good idea." We truly have the
+        biggest, fastest, and scariest rides in the world. If your face hasn't
+        melted off by pure adrenaline by the end of the day you'll get your
+        money back!
+      </div>
+
+      <!-- booking box-->
+      <div class="box">
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Pick your dates</label>
+              <p class="control has-icons-left">
+                <input
+                  class="input is-primary is-medium"
+                  type="text"
+                  name="datepicker"
+                  placeholder="Pick your dates"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-plane-departure"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label">No. of Guests</label>
+              <p class="control has-icons-left">
+                <input
+                  class="input is-primary is-medium"
+                  type="number"
+                  name="no-guests"
+                  placeholder="No. of Guests"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-person"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label">No. of Rooms</label>
+              <p class="control has-icons-left">
+                <input
+                  class="input is-primary is-medium"
+                  type="number"
+                  name="no-rooms"
+                  placeholder="No. of Rooms"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-bed"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="control has-icons-left">
+              <div
+                class="select is-primary is-medium"
+                style="margin-top: 30px; width: 100%"
+              >
+                <select style="width: 100%">
+                  <option value="" disabled selected>Choose your Hotel</option>
+                  <option value="1">Passed With Honors Inn</option>
+                  <option value="2">Failed Miserably Motel</option>
+                  <option value="3">Gap Year Hotel</option>
+                </select>
+              </div>
+              <span class="icon is-small is-left" style="margin-top: 30px">
+                <i class="fa-solid fa-hotel"></i>
+              </span>
+            </div>
+          </div>
+          <div class="column is-one-fifth">
+            <div class="control">
+              <button
+                class="button is-primary is-medium"
+                style="margin-top: 30px"
+              >
+                Let's Party!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end booking box-->
+
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary">
+                <h4 class="title">32 Years!!!</h4>
+                <p class="subtitle">
+                  Thank you for staying with us for so many years! The past 30
+                  years would not be possible if it wasn&apos;t for you
+                  wonderful people! Here's to 30 more years of thrills, spills,
+                  and hopefully no more fatalities!
+                </p>
+                <figure class="image is-square">
+                  <img
+                    alt="30 Years Cake!"
+                    src="./assets/images/30-years-cake.png"
+                  />
+                </figure>
+              </article>
+              <article class="tile is-child notification is-warning">
+                <h4 class="title">New Attracition!</h4>
+                <p class="subtitle">
+                  Come visit the newest attraction to the park! The tallest
+                  water ride in the world! climb 78 stories worth of stairs to
+                  get to this crazy ride. Experience gravity like never before.
+                </p>
+                <figure class="image is-2by1">
+                  <img
+                    alt="Tallest Water Ride in the World"
+                    src="./assets/images/tallest-water-ride.jpg"
+                  />
+                </figure>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info">
+                <h4 class="title">Submit Your Park Photos</h4>
+                <p class="subtitle">
+                  Submit your photos for the 2022 Goldsmiths Land
+                  <strong>International Photo Competition</strong>.
+                </p>
+                <p class="subtitle">Here are some winners from last year.</p>
+                <figure class="image is-4by3">
+                  <img
+                    alt="First Place Winner"
+                    src="./assets/images/winner-1.jpg"
+                  />
+                </figure>
+
+                <figure class="image is-2by1">
+                  <img
+                    alt="Second Place Winner"
+                    src="./assets/images/winner-2.jpg"
+                  />
+                </figure>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+              <h4 class="title">Win a 5 Year All Access Membership</h4>
+              <p class="subtitle">
+                Beat the world record egg toss and win a 5 Year All Access
+                Membership to Goldsmiths Land. Learn more <a>Here</a>
+              </p>
+              <div class="content">
+                <!-- Content -->
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <div class="content">
+              <h4 class="title">New Rules at Goldsmiths Land</h4>
+              <ul>
+                <li>
+                  No gum chewing. Last year we spent an estimated $430M cleaning
+                  gum off mascot uniforms.
+                </li>
+                <li>
+                  Parents may not visit the park without child supervision.
+                </li>
+                <li>No frowns. People frowning will be asked to leave.</li>
+                <li>We ask that you please not feed the Basilisks.</li>
+                <li>
+                  Keep hands, arms, legs and feet inside the ride at all times.
+                </li>
+                <li>Do not board a ride without trousers.</li>
+                <li>
+                  Remain seated in the ride until it comes to a complete stop
+                  and you are instructed to do the hokey pokey.
+                </li>
+                <li>
+                  Obey listed age, height, weight, and health restrictions.
+                </li>
+                <li>Do not board a ride pissed out of your skull.</li>
+                <li>
+                  Never force anyone, especially children, to ride attractions
+                  they don&apos;t want to ride.
+                </li>
+                <li>No Karens.</li>
+              </ul>
+              <div class="content">
+                <!-- Content -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Fatalities</p>
+            <p class="title">3,456</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Rides</p>
+            <p class="title">123</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Burgers Served</p>
+            <p class="title">456K</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Complaints</p>
+            <p class="title">789</p>
+          </div>
+        </div>
+      </nav>
+
+      <hr />
+      <!-- start footer -->
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Goldsmiths Land</strong> by
+            <a href="./index.html">Team web-develop-t4g1-t3j</a>. The source
+            code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            The website content is licensed
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+              >CC BY NC SA 4.0</a
+            >.
+          </p>
+          <p>Ride the rides. Eat the eats. ROFFLE the Lulz</p>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <script>
+      const video = document.querySelector("video")
+      console.log(video)
+      video.playbackRate = 0.75
+      $('input[name="datepicker"]').daterangepicker()
+    </script>
   </body>
 </html>
