@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <!-- ______     ______     __         _____     ______     __    __     __     ______   __  __     ______    
-        /\  ___\   /\  __ \   /\ \       /\  __-.  /\  ___\   /\ "-./  \   /\ \   /\__  _\ /\ \_\ \   /\  ___\   
-        \ \ \__ \  \ \ \/\ \  \ \ \____  \ \ \/\ \ \ \___  \  \ \ \-./\ \  \ \ \  \/_/\ \/ \ \  __ \  \ \___  \  
-         \ \_____\  \ \_____\  \ \_____\  \ \____-  \/\_____\  \ \_\ \ \_\  \ \_\    \ \_\  \ \_\ \_\  \/\_____\ 
-          \/_____/   \/_____/   \/_____/   \/____/   \/_____/   \/_/  \/_/   \/_/     \/_/   \/_/\/_/   \/_____/ 
-                                                                                                                
-         __         ______     __   __     _____                                                                 
-        /\ \       /\  __ \   /\ "-.\ \   /\  __-.                                                               
-        \ \ \____  \ \  __ \  \ \ \-.  \  \ \ \/\ \                                                              
-         \ \_____\  \ \_\ \_\  \ \_\\"\_\  \ \____-                                                              
-          \/_____/   \/_/\/_/   \/_/ \/_/   \/____/ 
-        
-        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, & Jonathan Dryhurst Roberts 
+    <!-- ______     ______     __         _____     ______     __    __     __     ______   __  __     ______
+        /\  ___\   /\  __ \   /\ \       /\  __-.  /\  ___\   /\ "-./  \   /\ \   /\__  _\ /\ \_\ \   /\  ___\
+        \ \ \__ \  \ \ \/\ \  \ \ \____  \ \ \/\ \ \ \___  \  \ \ \-./\ \  \ \ \  \/_/\ \/ \ \  __ \  \ \___  \
+         \ \_____\  \ \_____\  \ \_____\  \ \____-  \/\_____\  \ \_\ \ \_\  \ \_\    \ \_\  \ \_\ \_\  \/\_____\
+          \/_____/   \/_____/   \/_____/   \/____/   \/_____/   \/_/  \/_/   \/_/     \/_/   \/_/\/_/   \/_____/
+
+         __         ______     __   __     _____
+        /\ \       /\  __ \   /\ "-.\ \   /\  __-.
+        \ \ \____  \ \  __ \  \ \ \-.  \  \ \ \/\ \
+         \ \_____\  \ \_\ \_\  \ \_\\"\_\  \ \____-
+          \/_____/   \/_/\/_/   \/_/ \/_/   \/____/
+
+        © Calvin, Santiago Ramirez, ROBBIN, JL, Lauren, & Jonathan Dryhurst Roberts
           2022
         -->
 
@@ -74,6 +74,46 @@
         text-align: center;
         font-size: 2rem;
       }
+      /* Headline welcome text and its animation */
+      .welcome-text {
+        animation: color-animation 5s linear infinite;
+      }
+
+      .welcome-text-1 {
+        --color-1: black;
+        --color-2: red;
+        --color-3: black;
+      }
+
+      .welcome-text-2 {
+        --color-1: red;
+        --color-2: black;
+        --color-3: red;
+      }
+      @keyframes color-animation {
+        0% {
+          color: var(--color-1);
+        }
+        32% {
+          color: var(--color-1);
+        }
+        33% {
+          color: var(--color-2);
+        }
+        65% {
+          color: var(--color-2);
+        }
+        66% {
+          color: var(--color-3);
+        }
+        99% {
+          color: var(--color-3);
+        }
+        100% {
+          color: var(--color-1);
+        }
+      }
+
       video {
         position: absolute;
         top: 0;
@@ -84,10 +124,12 @@
         object-fit: cover;
         -o-object-position: center;
         object-position: center;
+        opacity: 0.5;
       }
       .footer {
         background-color: rgb(248, 248, 248);
       }
+
       /* This needs to be fixed */
       @media screen and (max-width: 400px) {
         html {
@@ -106,6 +148,35 @@
         justify-content: center;
         align-items: center;
         margin-top: 30px;
+      }
+      /* button and its animation */
+      .btn-large {
+        font-size: 20px;
+        font-weight: 800;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        text-transform: uppercase;
+        color: black;
+        opacity: 0.85;
+        z-index: 2;
+        animation: bounce 1s ease-in forwards infinite alternate;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .btn-large:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(100%);
+        }
       }
     </style>
   </head>
@@ -174,6 +245,7 @@
     </header>
 
     <!-- begin content -->
+
     <div class="content is-large">
       <!-- full screen video media container -->
       <video
@@ -190,19 +262,31 @@
       <!-- video text overlay -->
       <div class="overlay">
         <div>
-          <h1 class="animate__animated animate__heartBeat">
+          <h1 style="background: none;" class="welcome-text welcome-text-1">
             Welcome to Goldsmiths Land
           </h1>
-          <h4 class="animate__animated animate__bounce animate__delay-2s">
+
+          <h4 style="background: none;" class="welcome-text welcome-text-2">
             The most amazing rides in the world!
           </h4>
           <div class="header-button">
-            <button class="waves-effect waves-light btn-large">
+            <p class="btn-large">
               Tour the park
-            </button>
+              <img
+                src="./assets/images/down-arrow.svg"
+                style="
+                  width: 60px;
+                  height: 40px;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              />
+            </p>
           </div>
         </div>
       </div>
+
       <!-- end full screen video media container -->
 
       <div class="notification is-primary">
@@ -268,16 +352,16 @@
             <div class="control has-icons-left">
               <div
                 class="select is-primary is-medium"
-                style="margin-top: 30px; width: 100%"
+                style="margin-top: 30px; width: 100%;"
               >
-                <select style="width: 100%">
+                <select style="width: 100%;">
                   <option value="" disabled selected>Choose your Hotel</option>
                   <option value="1">Passed With Honors Inn</option>
                   <option value="2">Failed Miserably Motel</option>
                   <option value="3">Gap Year Hotel</option>
                 </select>
               </div>
-              <span class="icon is-small is-left" style="margin-top: 30px">
+              <span class="icon is-small is-left" style="margin-top: 30px;">
                 <i class="fa-solid fa-hotel"></i>
               </span>
             </div>
@@ -286,7 +370,7 @@
             <div class="control">
               <button
                 class="button is-primary is-medium"
-                style="margin-top: 30px"
+                style="margin-top: 30px;"
               >
                 Let's Party!
               </button>
@@ -435,6 +519,7 @@
       </nav>
 
       <hr />
+
       <!-- start footer -->
       <footer class="footer">
         <div class="content has-text-centered">
@@ -454,10 +539,10 @@
       <!-- end footer -->
     </div>
     <script>
-      const video = document.querySelector("video")
-      console.log(video)
-      video.playbackRate = 0.75
-      $('input[name="datepicker"]').daterangepicker()
+      const video = document.querySelector("video");
+      console.log(video);
+      video.playbackRate = 0.75;
+      $('input[name="datepicker"]').daterangepicker();
     </script>
   </body>
 </html>
