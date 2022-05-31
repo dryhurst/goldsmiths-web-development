@@ -2,9 +2,9 @@
 Web Development by University of London &amp; Goldsmiths, University of London
 
 # Core Team
- - Calvin
- - David Santiago Ramirez
- - ROBBIN
- - JL
- - Lauren
- - Jonathan Dryhurst Roberts
+ - LAUREN AREKHI
+ - DAVID RAMIREZ TORIFIO
+ - AUNG MIN
+ - JONATHAN DRYHURST ROBERTS
+ - IOANNIS LIANOPOULOS
+ - CALVIN BOCK
