@@ -20,165 +20,31 @@
 
     <!-- title shows up in the browser tab -->
     <title>Goldsmiths Land | The most amazing rides in the world!</title>
+    <!-- load jquery -->
     <script
-      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+      src="./assets/scripts/jquery.min.js"
       crossorigin="anonymous"
     ></script>
+    <!-- load moment -->
     <script
-      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      src="./assets/scripts/moment.min.js"
       crossorigin="anonymous"
     ></script>
+    <!-- load daterangepicker -->
     <script
-      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+      src="./assets/scripts/daterangepicker.min.js"
       crossorigin="anonymous"
     ></script>
+    <!-- load font-awesome -->
     <script
-      src="https://kit.fontawesome.com/f37eff7305.js"
+      src="./assets/scripts/f37eff7305.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!-- load CSS -->
+    <link rel="stylesheet" href="./assets/styles/daterangepicker.css" />
+    <link rel="stylesheet" href="./assets/styles/animate.min.css" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <style>
-      .overlay {
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .overlay h1 {
-        background: rgb(255, 255, 255) none repeat scroll 0 0;
-        color: #000;
-        font-weight: 800;
-        margin: 3rem 0 0;
-        mix-blend-mode: luminosity;
-        padding: 5px 15px;
-        text-align: center;
-        font-size: 4rem;
-      }
-      .overlay h4 {
-        background: rgb(255, 255, 255) none repeat scroll 0 0;
-        color: rgb(0, 0, 0);
-        font-weight: 600;
-        margin: 3rem 0 0;
-        mix-blend-mode: luminosity;
-        padding: 5px 15px;
-        text-align: center;
-        font-size: 2rem;
-      }
-      /* Headline welcome text and its animation */
-      .welcome-text {
-        animation: color-animation 5s linear infinite;
-      }
-
-      .welcome-text-1 {
-        --color-1: black;
-        --color-2: red;
-        --color-3: black;
-      }
-
-      .welcome-text-2 {
-        --color-1: red;
-        --color-2: black;
-        --color-3: red;
-      }
-      @keyframes color-animation {
-        0% {
-          color: var(--color-1);
-        }
-        32% {
-          color: var(--color-1);
-        }
-        33% {
-          color: var(--color-2);
-        }
-        65% {
-          color: var(--color-2);
-        }
-        66% {
-          color: var(--color-3);
-        }
-        99% {
-          color: var(--color-3);
-        }
-        100% {
-          color: var(--color-1);
-        }
-      }
-
-      video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: center;
-        object-position: center;
-        opacity: 0.5;
-      }
-      .footer {
-        background-color: rgb(248, 248, 248);
-      }
-
-      /* This needs to be fixed */
-      @media screen and (max-width: 400px) {
-        html {
-          background: url("./assets/images/video-poster.jpg");
-          background-size: cover;
-        }
-        .video-container {
-          display: none;
-        }
-      }
-      .nav-wrapper {
-        background-color: transparent;
-      }
-      .header-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-      }
-      /* button and its animation */
-      .btn-large {
-        font-size: 20px;
-        font-weight: 800;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 10px;
-        text-transform: uppercase;
-        color: black;
-        opacity: 0.85;
-        z-index: 2;
-        animation: bounce 1s ease-in forwards infinite alternate;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-      }
-      .btn-large:hover {
-        animation-play-state: paused;
-      }
-
-      @keyframes bounce {
-        0% {
-          transform: translateY(0);
-        }
-
-        100% {
-          transform: translateY(100%);
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -262,17 +128,18 @@
       <!-- video text overlay -->
       <div class="overlay">
         <div>
-          <h1 style="background: none;" class="welcome-text welcome-text-1">
+          <h1 style="background: none" class="welcome-text welcome-text-1">
             Welcome to Goldsmiths Land
           </h1>
 
-          <h4 style="background: none;" class="welcome-text welcome-text-2">
+          <h4 style="background: none" class="welcome-text welcome-text-2">
             The most amazing rides in the world!
           </h4>
           <div class="header-button">
             <p class="btn-large">
               Tour the park
               <img
+                alt="Hero video animated down arrow"
                 src="./assets/images/down-arrow.svg"
                 style="
                   width: 60px;
@@ -352,16 +219,16 @@
             <div class="control has-icons-left">
               <div
                 class="select is-primary is-medium"
-                style="margin-top: 30px; width: 100%;"
+                style="margin-top: 30px; width: 100%"
               >
-                <select style="width: 100%;">
+                <select style="width: 100%">
                   <option value="" disabled selected>Choose your Hotel</option>
                   <option value="1">Passed With Honors Inn</option>
                   <option value="2">Failed Miserably Motel</option>
                   <option value="3">Gap Year Hotel</option>
                 </select>
               </div>
-              <span class="icon is-small is-left" style="margin-top: 30px;">
+              <span class="icon is-small is-left" style="margin-top: 30px">
                 <i class="fa-solid fa-hotel"></i>
               </span>
             </div>
@@ -370,7 +237,7 @@
             <div class="control">
               <button
                 class="button is-primary is-medium"
-                style="margin-top: 30px;"
+                style="margin-top: 30px"
               >
                 Let's Party!
               </button>
@@ -385,7 +252,7 @@
           <div class="tile">
             <div class="tile is-parent is-vertical">
               <article class="tile is-child notification is-primary">
-                <h4 class="title">32 Years!!!</h4>
+                <h4 class="title">30 Years!!!</h4>
                 <p class="subtitle">
                   Thank you for staying with us for so many years! The past 30
                   years would not be possible if it wasn&apos;t for you
@@ -394,7 +261,7 @@
                 </p>
                 <figure class="image is-square">
                   <img
-                    alt="30 Years Cake!"
+                    alt="Illustration of a 30 Years Cake!"
                     src="./assets/images/30-years-cake.png"
                   />
                 </figure>
@@ -408,7 +275,7 @@
                 </p>
                 <figure class="image is-2by1">
                   <img
-                    alt="Tallest Water Ride in the World"
+                    alt="Photo of the Tallest Water Ride in the World"
                     src="./assets/images/tallest-water-ride.jpg"
                   />
                 </figure>
@@ -424,14 +291,14 @@
                 <p class="subtitle">Here are some winners from last year.</p>
                 <figure class="image is-4by3">
                   <img
-                    alt="First Place Winner"
+                    alt="Photo of a First Place Winner's Trophy"
                     src="./assets/images/winner-1.jpg"
                   />
                 </figure>
 
                 <figure class="image is-2by1">
                   <img
-                    alt="Second Place Winner"
+                    alt="Photo of a Second Place Winner's Trophy"
                     src="./assets/images/winner-2.jpg"
                   />
                 </figure>
@@ -539,10 +406,10 @@
       <!-- end footer -->
     </div>
     <script>
-      const video = document.querySelector("video");
-      console.log(video);
-      video.playbackRate = 0.75;
-      $('input[name="datepicker"]').daterangepicker();
+      const video = document.querySelector("video")
+      console.log(video)
+      video.playbackRate = 0.75
+      $('input[name="datepicker"]').daterangepicker()
     </script>
   </body>
 </html>
